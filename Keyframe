@@ -1,0 +1,15 @@
+# Add keyframes for random location and rotation for cube1
+
+bpy.context.scene.frame_set(1)
+
+cube1.location.x = randint(-5, 5)
+
+cube1.location.y = randint(-5, 5)
+
+cube1.location.z = randint(-5, 5)
+
+cube1.rotation_euler = (randint(0, 360), randint(0, 360), randint(0, 360))
+
+cube1.keyframe_insert(data_path="location", index=-1)
+
+cube1.keyframe_insert(data_path="rotation_euler", index=-1)
